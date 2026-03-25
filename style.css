@@ -19,17 +19,34 @@ body {
 
 
 .panel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 80vh;
-    border-radius: 50px;
     color: white;
     cursor: pointer;
     flex: 0.5;
     margin: 10px; 
     position: relative;
-    transition: all 700ms ease-in;
+    transition: all 0.5s ease-in-out;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    left: 20px;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s; /* empieza lento y acelera al final */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 10px;
 }
 
 
@@ -37,12 +54,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+   /* border-radius: 50px;*/
 }
 
 
-h3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
